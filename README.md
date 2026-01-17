@@ -19,4 +19,4 @@ This extension uses the official **VietQR API** to ensure the data is always up-
 ## 📄 License
 This project is licensed under the **MIT License**
 
-*Developed with ❤️ by Vietnamese developer*
+*Developed with ❤️ in Viet Nam 🇻🇳*
