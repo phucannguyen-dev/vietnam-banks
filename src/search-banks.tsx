@@ -53,7 +53,7 @@ export default function Command() {
                   <List.Item.Detail.Metadata.Label
                     title="Lookup with VietQR"
                     text={bank.lookupSupported ? "Supported" : "Not supported"}
-                    icon={bank.transferSupported ? { source: Icon.CheckCircle } : { source: Icon.XMarkCircle }}
+                    icon={bank.lookupSupported ? { source: Icon.CheckCircle } : { source: Icon.XMarkCircle }}
                   />
                 </List.Item.Detail.Metadata>
               }
