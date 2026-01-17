@@ -1,4 +1,4 @@
-import { ActionPanel, Action, List, Image, Icon, Color } from "@raycast/api";
+import { ActionPanel, Action, List, Image, Icon } from "@raycast/api";
 import { useFetch } from "@raycast/utils";
 
 interface Bank {
@@ -24,7 +24,7 @@ export default function Command() {
       {data?.data?.map((bank) => (
         <List.Item
           key={bank.id}
-          icon={{ source: bank.logo, mask: Image.Mask.RoundedRect }}
+          icon={{ source: bank.logo, mask: Image.Mask.RoundedRectangle }}
           title={bank.shortName}
           keywords={[bank.bin, bank.code, bank.shortName, bank.name]}
           detail={
@@ -47,21 +47,13 @@ export default function Command() {
                   <List.Item.Detail.Metadata.Label
                     title="Fast Transfer with VietQR"
                     text={bank.transferSupported ? "Supported" : "Not supported"}
-                    icon={
-                      bank.transferSupported
-                        ? { source: Icon.CheckCircle, color: Color.Green }
-                        : { source: Icon.XMarkCircle, color: Color.Secondary }
-                    }
+                    icon={bank.transferSupported ? { source: Icon.CheckCircle } : { source: Icon.XMarkCircle }}
                   />
 
                   <List.Item.Detail.Metadata.Label
                     title="Lookup with VietQR"
                     text={bank.lookupSupported ? "Supported" : "Not supported"}
-                    icon={
-                      bank.transferSupported
-                        ? { source: Icon.CheckCircle, color: Color.Green }
-                        : { source: Icon.XMarkCircle, color: Color.Secondary }
-                    }
+                    icon={bank.transferSupported ? { source: Icon.CheckCircle } : { source: Icon.XMarkCircle }}
                   />
                 </List.Item.Detail.Metadata>
               }
